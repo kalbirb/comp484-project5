@@ -13,6 +13,7 @@ const csunCenter = {
 // Quiz locations
 const locations = [
   {
+    // Assigned Location
     name: "C.R. Johnson Auditorium",
     description:
       "Campus auditorium used for engineering lectures, presentations, and special events.",
@@ -81,11 +82,12 @@ function initMap() {
 
     zoomControl: false,
     streetViewControl: false,
+    // Tilt and Rotate Presentation
     mapTypeControl: true,
     fullscreenControl: false,
     cameraControl: false,
 
-    // Remove overlays (IMPORTANT)
+    // Remove overlays
     styles: [
       {
         featureType: "all",
@@ -167,11 +169,18 @@ function checkAnswer(clickedLatLng) {
 
     document.getElementById("result").style.color = "green";
 
+    // confetti 
+    confetti({
+      particleCount: 120,
+      spread: 80,
+      origin: { y: 0.6 },
+    });
     // center of rectangle
     const centerLat = (place.bounds.north + place.bounds.south) / 2;
 
     const centerLng = (place.bounds.east + place.bounds.west) / 2;
 
+    // InfoWindow Presentation
     infoWindow.setContent(`
     <div style="font-size:14px; max-width:200px;">
       <strong>${place.name}</strong><br/>
