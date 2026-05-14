@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSUN Map Quiz</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+  <!-- Replace YOUR_API_KEY -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>CSUN Campus Location Quiz</h1>
+
+    <p id="question"></p>
+
+    <div id="map"></div>
+
+    <p id="result"></p>
+
+    <button id="nextBtn">Next Location</button>
+  </div>
+
+</body>
+
+</html>
