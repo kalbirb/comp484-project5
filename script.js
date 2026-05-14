@@ -13,14 +13,25 @@ const csunCenter = {
 // Quiz locations
 const locations = [
   {
+    name: "C.R. Johnson Auditorium",
+    description:
+      "Campus auditorium used for engineering lectures, presentations, and special events.",
+    bounds: {
+      north: 34.24154647739453,
+      south: 34.24128128431045,
+      east: -118.52875671100088,
+      west: -118.52911698821222,
+    },
+  },
+  {
     name: "University Library",
     description:
       "CSUN’s main academic library with study spaces and resources.",
     bounds: {
-      north: 34.2409,
-      south: 34.2397,
-      east: -118.528,
-      west: -118.5294,
+      north: 34.2403940993969,
+      south: 34.23952392585426,
+      east: -118.52863367815891,
+      west: -118.53003456091525,
     },
   },
   {
@@ -28,41 +39,30 @@ const locations = [
     description:
       "Fitness center with gym, courts, and recreational facilities.",
     bounds: {
-      north: 34.2412,
-      south: 34.2402,
-      east: -118.5257,
-      west: -118.527,
-    },
-  },
-  {
-    name: "CSUN Bookstore",
-    description:
-      "Official campus bookstore for textbooks, supplies, and merch.",
-    bounds: {
-      north: 34.2378,
-      south: 34.2368,
-      east: -118.5292,
-      west: -118.5304,
+      north: 34.24063027326154,
+      south: 34.23922543084572,
+      east: -118.5246306743233,
+      west: -118.52529828041911,
     },
   },
   {
     name: "Sierra Hall",
     description: "Academic building used for lectures and computer labs.",
     bounds: {
-      north: 34.2389,
-      south: 34.2379,
-      east: -118.5283,
-      west: -118.5295,
+      north: 34.23857276519373,
+      south: 34.238062764533005,
+      east: -118.53000762236316,
+      west: -118.5315096594592,
     },
   },
   {
     name: "Jacaranda Hall",
     description: "Engineering and technology classrooms and labs.",
     bounds: {
-      north: 34.2411,
-      south: 34.2401,
-      east: -118.5312,
-      west: -118.5325,
+      north: 34.2412839335393,
+      south: 34.24108880655959,
+      east: -118.52831885074364,
+      west: -118.529180070323,
     },
   },
 ];
@@ -71,7 +71,7 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow();
   map = new google.maps.Map(document.getElementById("map"), {
     center: csunCenter,
-    zoom: 18,
+    zoom: 17,
 
     // Disable movement
     draggable: false,
@@ -94,7 +94,7 @@ function initMap() {
       },
       {
         featureType: "poi",
-        stylers: [{ visibility: "on" }],
+        stylers: [{ visibility: "off" }],
       },
       {
         featureType: "transit",
